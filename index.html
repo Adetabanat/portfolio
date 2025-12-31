@@ -7,8 +7,10 @@
   <title>Daniel Adetaba Adongo | Software Developer + Data Analyst</title>
   <meta
     name="description"
-    content="Daniel Adetaba Adongo  — Software Developer and Data Analyst-Builds secure web apps and turns data into insights."
+    content="Daniel Adetaba Adongo — Software Developer and Data Analyst. Builds secure web apps and turns data into insights using SQL and R."
   />
+
+  <meta name="theme-color" content="#0b0f19" />
 
   <link rel="stylesheet" href="css/styles.css" />
 </head>
@@ -17,9 +19,9 @@
   <!-- Navbar -->
   <header class="nav">
     <div class="container nav-inner">
-      <a class="logo" href="#top">NAT</a>
+      <a class="logo" href="#top" aria-label="Go to top">PORTFOLIO</a>
 
-      <nav class="nav-links">
+      <nav class="nav-links" aria-label="Primary navigation">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
@@ -40,17 +42,16 @@
 
         <p class="sub">
           I build secure, high-performance web applications and turn raw data into clear,
-          actionable insights using the tools and technologies. I’m especially interested in a role as a Software Developer or Data Analyst.
+          actionable insights using SQL, R, and visualization. I’m open to Software Developer
+          and Data Analyst roles.
         </p>
-
-        <p class="sub muted">Open to Software Developer / Data Analyst roles</p>
 
         <div class="hero-actions">
           <a class="btn" href="#projects">View Projects</a>
           <a class="btn outline" href="assets/resume/resume.pdf" target="_blank" rel="noreferrer">View Resume</a>
         </div>
 
-        <div class="social">
+        <div class="social" aria-label="Contact links">
           <a href="mailto:danieladongonat@gmail.com">danieladongonat@gmail.com</a>
           <a href="tel:+233244734362">+233 2447-34362</a>
           <a href="https://www.linkedin.com/in/daniel-adetaba-adongo-9901292a0/" target="_blank" rel="noreferrer">LinkedIn</a>
@@ -73,7 +74,7 @@
     <div class="container">
       <h2>About</h2>
       <p class="lead">
-        I am a dynamic professional who seamlessly integrates advanced technical expertise with a keen analytical mindset. My core strength lies in designing and implementing efficient software solutions, underpinned by a rigorous foundation in statistical analysis and data science principles. I am adept at dissecting complex quantitative challenges, transforming intricate data into clear, actionable insights, and articulating these findings effectively to diverse audiences. My approach is characterized by a meticulous attention to detail and a persistent drive to optimize processes and deliver high-quality, impactful outcomes
+        I am a dynamic professional who seamlessly integrates advanced technical expertise with a keen analytical mindset. My core strength lies in designing and implementing efficient software solutions, underpinned by a rigorous foundation in statistical analysis and data science principles. I am adept at dissecting complex quantitative challenges, transforming intricate data into clear, actionable insights, and articulating these findings effectively to diverse audiences. My approach is characterized by a meticulous attention to detail and a persistent drive to optimize processes and deliver high-quality, impactful outcomes.
       </p>
     </div>
   </section>
@@ -87,28 +88,28 @@
         <div class="card">
           <h3>Software Engineering</h3>
           <ul class="list">
-            <li>Next.js, React, JavaScript (ES6+), TypeScript</li>
-            <li>HTML5, CSS3, Tailwind CSS</li>
-            <li>Node.js, Express.js, REST APIs</li>
-            <li>JWT authentication and secure workflows</li>
-            <li>PostgreSQL, SQL (schema + queries)</li>
-            <li>Git/GitHub, Agile/Scrum</li>
-            <li>Figma-to-code translation</li>
+            <li>Developed responsive web applications using Next.js and React</li>
+            <li>Built reusable UI components with modern JavaScript (ES6+) and TypeScript</li>
+            <li>Designed and consumed RESTful APIs using Node.js and Express</li>
+            <li>Implemented JWT-based authentication and secure workflows</li>
+            <li>Designed relational schemas and wrote optimized SQL queries</li>
+            <li>Used Git/GitHub for version control and team collaboration</li>
+            <li>Translated Figma designs into accessible, maintainable code</li>
           </ul>
         </div>
 
         <div class="card">
           <h3>Data Analytics</h3>
           <ul class="list">
-            <li>Data cleaning and transformation</li>
-            <li>SQL analysis (joins, aggregations, trends)</li>
-            <li>R programming for analysis</li>
-            <li>Visualization and data storytelling</li>
-            <li>Statistical reasoning and reporting</li>
-            <li>Executive summaries and recommendations</li>
+            <li>Collected, cleaned, and transformed structured datasets</li>
+            <li>Performed SQL-based analysis using joins, aggregations, and filters</li>
+            <li>Analyzed datasets using R for trend and behavioral insights</li>
+            <li>Created visualizations to communicate insights clearly</li>
+            <li>Applied statistical reasoning to support decision-making</li>
+            <li>Produced executive summaries with actionable recommendations</li>
           </ul>
 
-          <div class="badges">
+          <div class="badges" aria-label="Analytics badges">
             <span class="pill">SQL</span>
             <span class="pill">R</span>
             <span class="pill">Visualization</span>
@@ -139,15 +140,16 @@
             <span class="pill">Data Analytics</span>
           </div>
 
-          <p>
+          <p class="muted">
             Google Data Analytics Certificate capstone analyzing how annual members and casual riders use bikes differently,
-            and producing conversion-focused marketing recommendations.
+            producing conversion-focused marketing recommendations.
           </p>
 
           <ul class="list">
-            <li>Compared behavior patterns between members vs casual riders.</li>
-            <li>Identified weekday vs weekend usage differences and trip duration trends.</li>
-            <li>Delivered recommendations to increase conversions from casual riders to members.</li>
+            <li>Analyzed 12 months of bike-share data to compare member and casual rider behavior</li>
+            <li>Identified weekday commuter patterns versus weekend leisure usage</li>
+            <li>Used SQL and R to clean data, calculate ride durations, and segment users</li>
+            <li>Developed data-driven recommendations to increase annual membership conversion</li>
           </ul>
 
           <p class="meta">Tools: SQL • R • Visualization • Executive storytelling</p>
@@ -161,17 +163,23 @@
           </div>
         </article>
 
-        <!-- Project 1: SMS -->
+        <!-- Project 1 -->
         <article class="project">
           <div class="project-top">
             <h3>School Management System (SMS)</h3>
             <span class="pill">Web App</span>
           </div>
 
-          <p>
-            Built and deployed a School Management platform to support academic record tracking and improve school workflows.
-            Focused on performance, usability, and maintainable structure.
+          <p class="muted">
+            Built and deployed a school management platform to support academic record tracking and improve workflows.
           </p>
+
+          <ul class="list">
+            <li>Designed and deployed a web-based system for academic data tracking</li>
+            <li>Implemented structured UI components for student and record management</li>
+            <li>Improved usability and maintainability through modular frontend design</li>
+            <li>Deployed the application for real-world use in an academic setting</li>
+          </ul>
 
           <p class="meta">Tech: Next.js • React • JavaScript • Deployment</p>
 
@@ -190,17 +198,23 @@
           </div>
         </article>
 
-        <!-- Project 2: Finance Tracker -->
+        <!-- Project 2 -->
         <article class="project">
           <div class="project-top">
             <h3>Personal Finance Tracker</h3>
             <span class="pill">Productivity</span>
           </div>
 
-          <p>
-            A finance tracking app for recording income and expenses, reviewing transaction history,
-            and supporting better budgeting decisions.
+          <p class="muted">
+            Finance tracking app for recording income and expenses, reviewing history, and supporting budgeting decisions.
           </p>
+
+          <ul class="list">
+            <li>Built CRUD workflows for recording income and expenses</li>
+            <li>Implemented transaction history tracking for budgeting insights</li>
+            <li>Designed a clean interface to support financial awareness</li>
+            <li>Structured data handling to support future analytics features</li>
+          </ul>
 
           <p class="meta">Repo: finance_tracker</p>
 
@@ -213,17 +227,23 @@
           </div>
         </article>
 
-        <!-- Project 3: Team Project -->
+        <!-- Project 3 -->
         <article class="project">
           <div class="project-top">
             <h3>CSE 430 Team Project</h3>
             <span class="pill">Team</span>
           </div>
 
-          <p>
-            A collaborative engineering project completed in a team environment using GitHub workflows,
-            structured planning, and iterative delivery.
+          <p class="muted">
+            Team-based engineering project using GitHub workflows, structured planning, and iterative delivery.
           </p>
+
+          <ul class="list">
+            <li>Collaborated in a team-based software development environment</li>
+            <li>Used GitHub workflows for version control and feature integration</li>
+            <li>Contributed to planning, implementation, and iterative delivery</li>
+            <li>Applied Agile practices to meet project milestones</li>
+          </ul>
 
           <p class="meta">Repo: CSE-430_TEAM2</p>
 
@@ -236,103 +256,51 @@
           </div>
         </article>
       </div>
-
-      <p class="muted note">
-       
-      </p>
     </div>
   </section>
 
   <!-- Experience -->
-<section id="experience" class="section alt">
-  <div class="container">
-    <h2>Experience</h2>
+  <section id="experience" class="section alt">
+    <div class="container">
+      <h2>Experience</h2>
 
-    <div class="timeline">
-      <!-- Mathematics Tutor -->
-      <div class="timeline-item">
-        <h3>
-          Mathematics Tutor
-          <span class="muted">• 2018 – 2024</span>
-        </h3>
-        <p class="muted">St. Augustine’s College</p>
+      <ul class="list">
+        <li>Applied data tracking and analysis to evaluate performance and outcomes</li>
+        <li>Optimized workflows through process evaluation and data-driven decisions</li>
+        <li>Communicated insights clearly to technical and non-technical audiences</li>
+      </ul>
 
-        <ul class="list">
-          <li>
-            Assessed the academic performance of over 100 students per semester using structured tests,
-            customized assignments, and weighted-average class score analysis.
-          </li>
-          <li>
-            Updated and improved course materials, content, and delivery methods for more than 300 students
-            to enhance learning outcomes.
-          </li>
-          <li>
-            Selected as a mathematics coach and supported 20+ students in identifying learning gaps and
-            challenges affecting mathematics performance.
-          </li>
-          <li>
-            Tracked the academic progression of over 90% of students and provided timely, targeted interventions
-            for underperforming learners.
-          </li>
-          <li>
-            Implemented mathematical and educational software tools to improve student understanding,
-            resulting in a 90% improvement in exam pass rates.
-          </li>
-          <li>
-            Designed, scheduled, and administered multiple assessments for classes of 45+ students to prepare
-            candidates for the WASSCE examinations.
-          </li>
-          <li>
-            Monitored attendance and performance records, intervening early to address concerning trends.
-          </li>
-          <li>
-            Evaluated students using standardized criteria to determine individual learning needs and abilities.
-          </li>
-        </ul>
-      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>Mathematics Tutor <span class="muted">• 2018 – 2024</span></h3>
+          <p class="muted">St. Augustine’s College</p>
+          <ul class="list">
+            <li>Assessed 100+ students per semester using tests, assignments, and weighted-average score analysis</li>
+            <li>Updated course materials and delivery for 300+ students to improve outcomes and engagement</li>
+            <li>Supported 20+ students in identifying learning gaps and barriers as a mathematics coach</li>
+            <li>Tracked 90%+ student progression and delivered targeted interventions for underperformance</li>
+            <li>Implemented mathematical software tools, contributing to a 90% improvement in exam pass rates</li>
+            <li>Designed and administered assessments for classes of 45+ students to prepare candidates for WASSCE</li>
+            <li>Monitored attendance and performance records, intervening early on concerning trends</li>
+            <li>Evaluated students using standardized criteria to determine learning needs and abilities</li>
+          </ul>
+        </div>
 
-      <!-- Health Insurance Office -->
-      <div class="timeline-item">
-        <h3>
-          Health Insurance Office
-          <span class="muted">• 2016 – 2018</span>
-        </h3>
-        <p class="muted">Ghana Armed Forces — 37 Military Hospital</p>
-
-        <ul class="list">
-          <li>
-            Prepared notices, plans, reports, and charts to support presentations and operational decision-making.
-          </li>
-          <li>
-            Directed program implementation activities and monitored performance metrics to inform
-            continuous improvement strategies.
-          </li>
-          <li>
-            Conducted monthly vetting of over 1,000 insurance claims across all hospital departments,
-            ensuring 100% accuracy in submissions for payment.
-          </li>
-          <li>
-            Delivered public presentations and lectures to 50+ hospital staff on annual reports received
-            from the vetting committee.
-          </li>
-          <li>
-            Advocated for the deployment of data entry clerks in each ward, contributing to a 70% reduction
-            in client queuing time.
-          </li>
-          <li>
-            Maintained up-to-date knowledge of administrative, compliance, and operational methodologies
-            relevant to health insurance and institutional workflows.
-          </li>
-          <li>
-            Implemented mentoring and training programs for 30+ internship students, providing structured
-            guidance and professional development support.
-          </li>
-        </ul>
+        <div class="timeline-item">
+          <h3>Health Insurance Office <span class="muted">• 2016 – 2018</span></h3>
+          <p class="muted">Ghana Armed Forces — 37 Military Hospital</p>
+          <ul class="list">
+            <li>Prepared plans, reports, and charts to support presentations and operational decision-making</li>
+            <li>Directed program implementation and monitored performance metrics to inform improvement strategies</li>
+            <li>Conducted monthly vetting of 1,000+ claims across departments, ensuring 100% accuracy for payment submission</li>
+            <li>Delivered presentations to 50+ staff on annual reports received from the vetting committee</li>
+            <li>Advocated ward-level data entry support, contributing to a 70% reduction in client queuing time</li>
+            <li>Implemented mentoring/training programs for 30+ internship students, providing structured guidance</li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-
+  </section>
 
   <!-- Education -->
   <section id="education" class="section">
@@ -342,22 +310,22 @@
       <div class="edu">
         <div class="card">
           <h3>Degree in Software Development <span class="muted">• 2024 – 2027</span></h3>
-          <p>Brigham Young University</p>
+          <p class="muted">Brigham Young University</p>
         </div>
 
         <div class="card">
           <h3>Google Data Analytics Certificate <span class="muted">• 2025</span></h3>
-          <p>SQL • R • Visualization • Statistical methods</p>
+          <p class="muted">SQL • R • Visualization • Statistical methods</p>
         </div>
 
         <div class="card">
           <h3>Certificate in Software Development <span class="muted">• 2024</span></h3>
-          <p>Brigham Young University</p>
+          <p class="muted">Brigham Young University</p>
         </div>
 
         <div class="card">
           <h3>Bachelor of Statistics <span class="muted">• 2012 – 2016</span></h3>
-          <p>KNUST</p>
+          <p class="muted">KNUST</p>
         </div>
       </div>
     </div>
@@ -372,10 +340,9 @@
       <form
         class="form"
         id="contactForm"
-        action=https://formspree.io/f/mwvpepwn
+        action="https://formspree.io/f/mwvpepwn"
         method="POST"
       >
-        <!-- Honeypot (spam trap) -->
         <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" />
 
         <label>
@@ -408,7 +375,7 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>© <span id="year"></span>  DANAT SOLUTIONS</p>
+      <p>© <span id="year"></span> DANAT SOLUTIONS</p>
     </div>
   </footer>
 
