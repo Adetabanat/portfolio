@@ -34,7 +34,6 @@
       statusEl.textContent = message;
       statusEl.className = ["hint", type].filter(Boolean).join(" ");
 
-      // bring feedback into view on small screens
       if (message && window.innerWidth < 768) {
         statusEl.scrollIntoView({ behavior: "smooth", block: "center" });
       }
@@ -64,23 +63,17 @@
         if (Array.isArray(data?.errors) && data.errors.length) {
           return data.errors.map((e) => e?.message).filter(Boolean).join(" ");
         }
-      } catch {
-        // ignore parsing errors
-      }
+      } catch {}
       return fallback;
     };
 
     on(form, "submit", async (e) => {
       e.preventDefault();
-
-      // Prevent double-submit
       if (submitBtn?.disabled) return;
 
-      // Honeypot spam trap
       const gotcha = qs('input[name="_gotcha"]', form);
       if (gotcha?.value?.trim()) return;
 
-      // Native validation
       if (!form.checkValidity()) {
         form.reportValidity();
         return;
@@ -90,11 +83,9 @@
       setStatus("");
 
       try {
-        const formData = new FormData(form);
-
         const res = await fetch(form.action, {
           method: "POST",
-          body: formData,
+          body: new FormData(form),
           headers: { Accept: "application/json" }
         });
 
@@ -102,8 +93,7 @@
           setStatus("Message sent successfully. I’ll get back to you soon!", "success");
           form.reset();
         } else {
-          const msg = await getFormspreeError(res);
-          setStatus(msg, "error");
+          setStatus(await getFormspreeError(res), "error");
         }
       } catch {
         setStatus("Network error. Please check your connection and try again.", "error");
@@ -113,54 +103,52 @@
     });
   };
 
-  // ---------- mobile nav (hamburger) ----------
+  // ---------- mobile nav (hamburger -> cross) ----------
   const initMobileNav = () => {
     const navToggle = qs(".nav-toggle");
     const navLinks = qs("#primary-nav");
     if (!navToggle || !navLinks) return;
 
-    const setOpen = (isOpen) => {
-      navLinks.dataset.open = String(isOpen);
-      navToggle.dataset.open = String(isOpen);
+    const applyState = (open) => {
+      navLinks.dataset.open = open ? "true" : "false";
+      navToggle.dataset.open = open ? "true" : "false";
 
-      navToggle.setAttribute("aria-expanded", String(isOpen));
-      navToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
-
-      // optional: prevent background scroll when menu is open
-      // document.body.style.overflow = isOpen ? "hidden" : "";
+      navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+      navToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
     };
 
     const isOpen = () => navLinks.dataset.open === "true";
 
-    const close = () => setOpen(false);
-    const open = () => setOpen(true);
+    const open = () => applyState(true);
+    const close = () => applyState(false);
     const toggle = () => (isOpen() ? close() : open());
 
-    // initial state
-    setOpen(false);
+    // initial state (important for CSS cross animation)
+    applyState(false);
 
-    on(navToggle, "click", toggle);
-
-    // Close when clicking a nav link
-    on(navLinks, "click", (e) => {
-      const a = e.target?.closest?.("a");
-      if (a) close();
+    on(navToggle, "click", (e) => {
+      e.preventDefault();
+      toggle();
     });
 
-    // Close when clicking outside
+    // close when a link is clicked
+    on(navLinks, "click", (e) => {
+      if (e.target?.closest?.("a")) close();
+    });
+
+    // close when clicking outside
     on(document, "click", (e) => {
       if (!isOpen()) return;
-      const clickedInsideMenu = navLinks.contains(e.target);
-      const clickedToggle = navToggle.contains(e.target);
-      if (!clickedInsideMenu && !clickedToggle) close();
+      if (navLinks.contains(e.target) || navToggle.contains(e.target)) return;
+      close();
     });
 
-    // Close on Escape
+    // close on Escape
     on(document, "keydown", (e) => {
       if (e.key === "Escape") close();
     });
 
-    // Auto-close if resized to desktop
+    // close on desktop resize
     on(window, "resize", () => {
       if (window.innerWidth > 900) close();
     });
