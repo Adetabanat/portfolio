@@ -2,7 +2,7 @@
 
 A professional portfolio showcasing my work as a **Software Developer** and **Data Analyst**, featuring real-world web applications and data analytics projects.
 
-🔗 **Live Site:** https://adetabanat.github.io/my-portfolio  
+🔗 **Live Site:** https://adetabanat.github.io/portfolio  
 📫 **Contact:** danieladongonat@gmail.com  
 💼 **LinkedIn:** https://www.linkedin.com/in/daniel-adetaba-adongo-9901292a0/  
 🐙 **GitHub:** https://github.com/Adetabanat
